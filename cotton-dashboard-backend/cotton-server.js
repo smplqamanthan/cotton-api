@@ -3189,5 +3189,10 @@ app.post("/api/pending-lots/upload", upload.single("file"), async (req, res) => 
   }
 });
 
+app.get('/wake', (req, res) => {
+  res.send('Backend awake!');
+});
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
