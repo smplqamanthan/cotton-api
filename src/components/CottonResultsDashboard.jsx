@@ -344,6 +344,26 @@ function CottonResultsDashboard() {
             {pendingLoading ? "Loading..." : "Pending Lot Results"}
           </button>
         </div>
+ <div className="flex flex-wrap gap-3 md:self-center">
+ <button
+  className="bg-orange-600 hover:bg-green-700 text-white px-4 py-4 rounded shadow text-lm font-semibold"
+  onClick={async () => {
+    try {
+      const response = await fetch('https://cotton-api-ekdn.onrender.com/wake');
+      if (response.ok) alert('Backend wake request sent!');
+      else alert('Failed to wake backend');
+    } catch (err) {
+      console.error(err);
+      alert('Error pinging backend');
+    }
+  }}
+>
+  Start Server
+</button>
+
+
+        </div>
+
       </div>
 
       {error && (
