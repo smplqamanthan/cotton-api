@@ -3190,7 +3190,7 @@ app.post("/api/pending-lots/upload", upload.single("file"), async (req, res) => 
 });
 
 app.get('/wake', (req, res) => {
-  res.send('Backend awake!');
+  res.json({ success: true, message: 'Backend is awake!' });
 });
 
 
