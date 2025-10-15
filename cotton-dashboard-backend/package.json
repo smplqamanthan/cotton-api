@@ -1,0 +1,17 @@
+{
+  "name": "cotton-dashboard-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cotton-server.js",
+  "scripts": {
+    "start": "node cotton-server.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}
